@@ -1,3 +1,7 @@
+import Link from "next/link";
+import Filter from "./Filter";
+import Search from "./Search";
+
 export default function Header() {
   return (
     <header>
@@ -6,29 +10,10 @@ export default function Header() {
           <div className="row">
             <div className="col">
               <div className="navbar-wrapper d-flex justify-content-between align-items-center">
-                <a className="logo" href="/"></a>
+                <Link className="logo" href="/"></Link>
                 <div className="d-flex control-wrapper">
-                  <div className="catalog-button">
-                    <button>
-                      <span className="catalog-button_burger"></span>
-                      <span className="catalog-button_text">Каталог</span>
-                    </button>
-                    <div className="catalog">
-                      <ul className="catalog-list">
-                        <li>Игровая приставка</li>
-                        <li>Периферия для ПК</li>
-                        <li>Игры и софт</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="search">
-                    <div className="search-wrapper">
-                      <input className="search-wrapper_input" type="text" />
-                    </div>
-                    <div className="search-btn">
-                      <button></button>
-                    </div>
-                  </div>
+                  <Filter />
+                  <Search />
                 </div>
                 <a href="#" id="cart">
                   <span className="counter">0</span>

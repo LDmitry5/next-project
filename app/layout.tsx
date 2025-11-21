@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={GTEestiProText.className}>
+    <html lang="en">
       <head>
         <link
           rel="stylesheet"
@@ -31,7 +31,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body>
+      <body className={GTEestiProText.className}>
         <Header />
         <main>{children}</main>
         <Cart />
