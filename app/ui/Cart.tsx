@@ -23,9 +23,7 @@ export default function Cart() {
                 </div>
 
                 <div className="card-body justify-content-between">
-                  <div className="card-price">
-                    {product.count} x {product.price} ₽ = {product.count * product.price} ₽
-                  </div>
+                  <div className="card-price">{product.count > 1 ? `${product.count} x ${product.price} ₽ = ${product.count * product.price} ₽` : `${product.price} ₽`}</div>
                   <h5 className="card-title">{product.title}</h5>
                   <button className="btn btn-primary" onClick={() => deleteCartItem(product)}>
                     Удалить
