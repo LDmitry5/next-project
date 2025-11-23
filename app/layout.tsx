@@ -2,6 +2,7 @@ import "./scss/style.scss";
 import localFont from "next/font/local";
 import Cart from "./ui/Cart";
 import Header from "./ui/Header";
+import CartProvider from "./providers/CartProvider";
 
 const GTEestiProText = localFont({
   src: [
@@ -32,9 +33,11 @@ export default function RootLayout({
         />
       </head>
       <body className={GTEestiProText.className}>
-        <Header />
-        <main>{children}</main>
-        <Cart />
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Cart />
+        </CartProvider>
       </body>
     </html>
   );

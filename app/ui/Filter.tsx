@@ -16,7 +16,7 @@ export default function Filter() {
     } else {
       params.delete("category");
     }
-
+    setIsOpen(!isOpen);
     router.replace(`${pathname}?${params.toString()}`);
   };
   return (
